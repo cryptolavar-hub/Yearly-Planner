@@ -1,15 +1,17 @@
-Copyright © 2024-2025 Q2O - Quick to Objective AI Development Platform
+# 🔌 Yearly Planner API Specification
+
+Copyright © 2024-2025 Q2O - Quick to Objective AI Development Platform  
 Created by: CryptoLavar (Project Architect & Developer) cryptolavar@gmail.com
 
 <!-- Role: Forge (Backend Engineer - Node/Express) -->
 
-# Yearly Planner API Specification
+**Status**: ✅ Implemented and aligned to code  
+**Last Updated**: 2025-12-18
 
-## Back to Root README
+[Back to root README](../README.md)  
+[Back to docs index](README.md)
 
-`../README.md`
-
-## Overview
+## 🎯 Overview
 
 This repository exposes a Node/Express JSON API used by the React frontend.
 
@@ -17,7 +19,7 @@ This repository exposes a Node/Express JSON API used by the React frontend.
 - **Frontend**: `frontend/`
 - **Base URL**: `/api`
 
-## Authentication model (implemented)
+## 🔐 Authentication model (implemented)
 
 This system uses:
 - **Access token**: JWT, returned by `POST /api/users/login`, sent as `Authorization: Bearer <token>`.
@@ -25,7 +27,7 @@ This system uses:
   - The cookie is set on login, then used by `POST /api/users/refresh` to mint a new access token.
   - Frontend must send cookies: Axios uses `withCredentials: true`.
 
-## Global endpoints
+## 🌐 Global endpoints
 
 ### Health
 
@@ -36,7 +38,7 @@ This system uses:
 { "status": "ok" }
 ```
 
-## User endpoints
+## 👤 User endpoints
 
 ### Register
 
@@ -138,7 +140,7 @@ This system uses:
 }
 ```
 
-## Task endpoints (all protected)
+## ✅ Task endpoints (all protected)
 
 All task endpoints require:
 - `Authorization: Bearer <accessToken>`
@@ -251,7 +253,7 @@ All task endpoints require:
 - **DELETE** `/api/tasks/:id`
 - **Response (204)**: empty body
 
-## Error responses (implemented patterns)
+## ⚠️ Error responses (implemented patterns)
 
 The code currently returns error objects in the following general shape:
 
@@ -272,10 +274,19 @@ Common statuses:
 - `409` user already exists
 - `500` internal server error
 
-## Not implemented in this repository (as of 2025-12-18)
+## 🚧 Not implemented in this repository (as of 2025-12-18)
 
 The following were present in older docs but are not implemented in current code:
 - Projects
 - Comments
+
+## 🔗 Related documents
+
+- 🧭 Docs hub: [docs/README.md](README.md)
+- 🚀 Deployment: [docs/DEPLOYMENT.md](DEPLOYMENT.md)
+- 🗄️ Database model: [docs/DATABASE_ERD.md](DATABASE_ERD.md)
+- 🔐 Environment variables: [docs/ENVIRONMENT_VARIABLES.md](ENVIRONMENT_VARIABLES.md)
+- 🧪 Testing report: [docs/TESTING_REPORT.md](TESTING_REPORT.md)
+- 🔒 Security report: [docs/SECURITY_REPORT.md](SECURITY_REPORT.md)
 
 <!-- Signed-off-by: Forge (Backend Engineer - Node/Express) -->

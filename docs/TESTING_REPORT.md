@@ -1,13 +1,15 @@
-# Testing Report (Plan and Execution Log)
+# 🧪 Testing Report (Plan and Execution Log)
 
-Copyright © 2024-2025 Q2O - Quick to Objective AI Development Platform
+Copyright © 2024-2025 Q2O - Quick to Objective AI Development Platform  
 Created by: CryptoLavar (Project Architect & Developer) cryptolavar@gmail.com
 
 <!-- Role: Sable (QA Terminator - Bug Killer) -->
 
-## Back to Root README
+**Status**: ✅ Backend tests passing | ✅ Frontend build passing | ✅ Frontend tests passing  
+**Last Updated**: 2025-12-18
 
-`../README.md`
+[Back to root README](../README.md)  
+[Back to docs index](README.md)
 
 ## Scope
 
@@ -19,13 +21,13 @@ Repository architecture baseline:
 - Backend: `backend/` (Node/Express)
 - Frontend: `frontend/` (React)
 
-## Preconditions
+## ✅ Preconditions
 
 - Node.js installed (recommended: Node 18+).
 - MongoDB available for full integration testing (note: the baseline tests below do not require DB).
-- Backend environment variables set (see `docs/ENVIRONMENT_VARIABLES.md`).
+- Backend environment variables set (see [docs/ENVIRONMENT_VARIABLES.md](ENVIRONMENT_VARIABLES.md)).
 
-## Planned tests to run (about to execute)
+## 📋 Planned tests to run
 
 Notes:
 - The commands below are written to work in PowerShell on Windows.
@@ -88,7 +90,7 @@ Success criteria
 - `npm run build` exits 0.
 - `npm test -- --watchAll=false --passWithNoTests` exits 0.
 
-## Execution log
+## 🧾 Execution log
 
 ### Run metadata
 - Date: 2025-12-18
@@ -127,5 +129,17 @@ Success criteria
 ### Follow-ups / defects created
 
 - Frontend tests previously missing; now remediated with a basic smoke test. Expand coverage before launch (auth flow, task CRUD, error states).
+
+## 📜 Historical testing reports
+
+- **[Testing Report - Gate 3 (2025-12-17)](md_docs/Reports/Testing/TESTING_REPORT_GATE3_2025-12-17.md)** (historical reference)
+
+## 🔗 Related documents
+
+- 🧭 Docs hub: [docs/README.md](README.md)
+- 🤖 Workflow: [docs/WORKFLOW.md](WORKFLOW.md)
+- 🚀 Deployment: [docs/DEPLOYMENT.md](DEPLOYMENT.md)
+- 🔌 API spec: [docs/API.md](API.md)
+- 🔐 Environment variables: [docs/ENVIRONMENT_VARIABLES.md](ENVIRONMENT_VARIABLES.md)
 
 <!-- Signed-off-by: Sable (QA Terminator - Bug Killer) -->

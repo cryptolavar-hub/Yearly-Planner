@@ -3,6 +3,16 @@ Created by: CryptoLavar (Project Architect & Developer) cryptolavar@gmail.com
 
 <!-- Role: Atlas (Project Delivery Manager) -->
 
+# 👥 Roles and Skillsets (Historical Snapshot - 2025-12-18)
+
+[Back to root README](../../../README.md)  
+[Back to docs index](../../README.md)  
+[Back to History](README.md)
+
+This document preserves an earlier roles/skillsets snapshot. The current workflow and roles are maintained in [docs/WORKFLOW.md](../../WORKFLOW.md).
+
+## Original snapshot content (verbatim)
+
 ## Roles and Skillsets Required to Build and Launch Publicly
 
 Scope covered:
@@ -74,28 +84,6 @@ Personas are role-hats I can switch between during phases. Each persona has a na
   - **Mandate**: Ensure documentation matches reality and supports operations and onboarding.
   - **Skills**: Technical writing, runbooks, API docs, change logs.
   - **Key outputs**: Updated deployment docs, API docs, operator runbooks, session logs.
-
-## Minimum staffing profile by phase
-
-### Phase A: Stabilize build and local run (launch-blocker removal)
-- Atlas, Forge, Nova, Relay, Sable
-
-### Phase B: Security and correctness hardening
-- Forge, Sentinel, Index, Sable
-
-### Phase C: Feature completion (calendar, reminders, tasks)
-- Mercury, Lumen, Nova, Forge, Index, Sable
-
-### Phase D: Performance and launch readiness
-- Relay, Forge, Nova, Sentinel, Sable, Quill
-
-## Skillset requirements mapped to current repo reality (gap-oriented)
-
-High-level gaps inferred from code and docs (details are in `KB_BUG_AUDIT_AND_EXECUTION_PLAN.md`):
-- **Build system gaps**: missing backend dependency manifest; frontend scripts depend on missing tooling.
-- **Security gaps**: plaintext credential handling; missing auth/authorization for data access.
-- **Correctness gaps**: no user scoping on tasks; no validation; docs mismatch to implementation.
-- **Quality gaps**: near-zero automated test coverage; tests that do exist are skipped due to import mismatch.
 
 <!-- Signed-off-by: Atlas (Project Delivery Manager) -->
 

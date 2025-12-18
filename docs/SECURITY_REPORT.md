@@ -1,114 +1,87 @@
-# Security Audit Report - Gate 2
+# 🔒 Security Report (Current State)
 
-**Generated**: 2025-12-17T23:15:02.369392  
-**Gate**: 2  
-**Security Score**: 70/100
+Copyright © 2024-2025 Q2O - Quick to Objective AI Development Platform  
+Created by: CryptoLavar (Project Architect & Developer) cryptolavar@gmail.com
 
----
+<!-- Role: Sentinel (Application Security Engineer) -->
 
-## Executive Summary
+**Status**: ✅ Core security baseline implemented (Gate 2 Option B)  
+**Last Updated**: 2025-12-18
 
-This security audit was performed as part of the Triple-Gate Quality Control process.
-
-**Files Scanned**: 14  
-**Dependencies Checked**: 0  
-**Security Checks Performed**: 6  
-**Total Issues Found**: 12  
-**Critical**: 0  
-**High**: 0  
-**Medium**: 0  
-**Low**: 0
+[Back to root README](../README.md)  
+[Back to docs index](README.md)
 
 ---
 
-## Security Scan Details
+## 🎯 Executive Summary
 
-### Files Scanned
+This report describes the **current** security posture of the Yearly Planner repository.
 
-**Total Files**: 14
-
-**Files Scanned (sample):**
-
-- `frontend\src\components\Register.js`
-- `api\app\endpoints.py`
-- `backend\models\User.js`
-- `frontend\src\components\Login.js`
-- `backend\models\Task.js`
-- `backend\routes\task.js`
-- `tests\test_endpoints.py`
-- `frontend\src\components\Home.js`
-- `frontend\src\index.js`
-- `backend\routes\user.js`
-- `backend\app.js`
-- `frontend\src\App.js`
-- `frontend\tailwind.config.js`
-- `backend\config\db.js`
-
-### Security Checks Performed
-
-**Total Checks**: 6
-
-1. Dependency Vulnerability Scan
-2. Code Security Scan (Bandit + Semgrep)
-3. Secrets Scan
-4. API Security Scan
-5. Infrastructure Security Scan
-6. OWASP Top 10 Checks
-
-### Per-Category Scan Results
-
-#### ✅ Dependency Scan
-
-- **Status**: Passed
-- **Items Checked**: 0
-- **Issues Found**: 0
-
-#### ✅ Code Security Scan
-
-- **Status**: Passed
-- **Items Checked**: 14
-- **Issues Found**: 0
-
-#### ✅ Secrets Scan
-
-- **Status**: Passed
-- **Items Checked**: 14
-- **Issues Found**: 0
-
-#### ⚠️ Api Security Scan
-
-- **Status**: Issues Found
-- **Items Checked**: 0
-- **Issues Found**: 2
-
-#### ✅ Infrastructure Scan
-
-- **Status**: Passed
-- **Items Checked**: 0
-- **Issues Found**: 0
-
-#### ✅ Owasp Top 10 Checks
-
-- **Status**: Passed
-- **Items Checked**: 10
-- **Issues Found**: 0
+Key outcomes:
+- 🔐 **Passwords are hashed** (bcrypt) and never returned in API responses
+- 🪪 **JWT access tokens** issued on login; bearer auth required for protected resources
+- 🍪 **Refresh token** is stored in an **httpOnly cookie** and used for token refresh/logout
+- 🧱 **Task isolation** enforced: every task query is scoped to the authenticated user
+- 🛡️ Baseline hardening enabled: **Helmet**, **rate limiting**, **CORS allowlist**, **cookie parsing**
 
 ---
 
-## Critical Issues (0)
+## ✅ Implemented controls (what is live in code)
 
-## Security Recommendations
+### Authentication and session security
 
-1. Address all critical issues immediately
-2. Review high priority issues within 24 hours
-3. Monitor medium and low priority issues in future audits
-4. Implement security best practices as identified
+- ✅ bcrypt password hashing (`backend/routes/user.js`, `backend/models/User.js`)
+- ✅ JWT access tokens (Authorization: `Bearer <token>`)
+- ✅ Refresh token cookie (`refresh_token`) is httpOnly and is not readable by JavaScript
+- ✅ Logout endpoint revokes refresh token hash (best-effort)
 
-## Conclusion
+### Authorization and access control
 
-Security audit completed after scanning 14 files
-checking 0 dependencies
-and performing 6 security check categories:
-  - Dependency Vulnerability Scan, Code Security Scan (Bandit + Semgrep), Secrets Scan, API Security Scan, Infrastructure Security Scan, OWASP Top 10 Checks
+- ✅ `/api/tasks/*` requires authentication
+- ✅ Tasks are user-scoped for list/get/update/delete
 
-⚠️ **Security issues found:** 0 critical and 2 high-priority issues detected. Project completion is blocked until these issues are resolved.
+### API hardening
+
+- ✅ Helmet (security headers)
+- ✅ Rate limiting (global + auth route limiter)
+- ✅ CORS allowlist (configured via `CORS_ORIGINS`)
+
+### Secrets handling
+
+- ✅ JWT secret must be provided via environment variable (see [docs/ENVIRONMENT_VARIABLES.md](ENVIRONMENT_VARIABLES.md))
+- ✅ Authorization and cookies are redacted from request logs
+
+---
+
+## ⚠️ Open items (recommended next hardening steps)
+
+These are not blockers for local development, but are recommended for public launch:
+
+- 🔄 **Refresh token rotation**
+  - Rotate refresh tokens on each refresh and invalidate the previous one to reduce replay risk.
+- 🔐 **Account security controls**
+  - Add lockout/backoff on repeated login failures and consider MFA support for elevated roles (if introduced later).
+- 🧾 **Audit logging**
+  - Add structured audit logs for auth events (login, refresh, logout) without leaking tokens.
+- 📦 **Dependency vulnerability scanning**
+  - Integrate automated `npm audit` (or equivalent) into CI.
+- 🧪 **DB-backed security tests**
+  - Add integration tests for cross-user task access denial with a real Mongo instance.
+
+---
+
+## 📜 Historical reports
+
+For the point-in-time Gate 2 scan that preceded remediation:
+- **[Security Audit Report - Gate 2 (2025-12-17)](md_docs/Reports/Security/SECURITY_AUDIT_REPORT_GATE2_2025-12-17.md)**
+
+## 🔗 Related documents
+
+- 🧭 Docs hub: [docs/README.md](README.md)
+- 🤖 Workflow: [docs/WORKFLOW.md](WORKFLOW.md)
+- 🔌 API spec: [docs/API.md](API.md)
+- 🚀 Deployment: [docs/DEPLOYMENT.md](DEPLOYMENT.md)
+- 🔐 Environment variables: [docs/ENVIRONMENT_VARIABLES.md](ENVIRONMENT_VARIABLES.md)
+- 🧪 Testing report: [docs/TESTING_REPORT.md](TESTING_REPORT.md)
+
+<!-- Signed-off-by: Sentinel (Application Security Engineer) -->

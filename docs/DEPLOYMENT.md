@@ -1,13 +1,15 @@
-Copyright © 2024-2025 Q2O - Quick to Objective AI Development Platform
+# 🚀 Deployment Guide (Yearly Planner)
+
+Copyright © 2024-2025 Q2O - Quick to Objective AI Development Platform  
 Created by: CryptoLavar (Project Architect & Developer) cryptolavar@gmail.com
 
 <!-- Role: Relay (DevOps/SRE) -->
 
-# Deployment Guide (Yearly Planner)
+**Status**: ✅ Aligned to current repo structure  
+**Last Updated**: 2025-12-18
 
-## Back to Root README
-
-`../README.md`
+[Back to root README](../README.md)  
+[Back to docs index](README.md)
 
 ## Overview
 
@@ -15,7 +17,7 @@ This repository contains:
 - **Backend**: `backend/` (Node/Express + MongoDB via Mongoose)
 - **Frontend**: `frontend/` (React via Create React App + Tailwind)
 
-The backend exposes endpoints under `/api` (see `docs/API.md`).
+The backend exposes endpoints under `/api` (see [docs/API.md](API.md)).
 
 ## Prerequisites
 
@@ -25,7 +27,7 @@ The backend exposes endpoints under `/api` (see `docs/API.md`).
 
 Repository policy:
 - `.env` files are not committed. Configure environment variables via your local `.env` (ignored) or a secrets manager.
-- See `docs/ENVIRONMENT_VARIABLES.md` for the full list.
+- See [docs/ENVIRONMENT_VARIABLES.md](ENVIRONMENT_VARIABLES.md) for the full list.
 
 ## Local development (recommended)
 
@@ -113,7 +115,16 @@ Serve `frontend/build` via your web server (Nginx, etc.).
 ## Testing before deploy
 
 Use the authoritative test run plan/log:
-- `docs/TESTING_REPORT.md`
+- [docs/TESTING_REPORT.md](TESTING_REPORT.md)
+
+## 🔗 Related documents
+
+- 🧭 Docs hub: [docs/README.md](README.md)
+- 🔌 API spec: [docs/API.md](API.md)
+- 🗄️ Database model: [docs/DATABASE_ERD.md](DATABASE_ERD.md)
+- 🔐 Environment variables: [docs/ENVIRONMENT_VARIABLES.md](ENVIRONMENT_VARIABLES.md)
+- 🔒 Security report: [docs/SECURITY_REPORT.md](SECURITY_REPORT.md)
+- 🤖 Workflow: [docs/WORKFLOW.md](WORKFLOW.md)
 
 ## Troubleshooting
 

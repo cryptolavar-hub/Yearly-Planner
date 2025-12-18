@@ -1,9 +1,17 @@
-Copyright © 2024-2025 Q2O - Quick to Objective AI Development Platform
+# 🔐 Environment Variables (Yearly Planner)
+
+Copyright © 2024-2025 Q2O - Quick to Objective AI Development Platform  
 Created by: CryptoLavar (Project Architect & Developer) cryptolavar@gmail.com
 
 <!-- Role: Relay (DevOps/SRE) -->
 
-## Environment Variables (Yearly Planner)
+**Status**: ✅ Current  
+**Last Updated**: 2025-12-18
+
+[Back to root README](../README.md)  
+[Back to docs index](README.md)
+
+---
 
 This repository intentionally does not store `.env` files. Use your preferred secrets manager or local `.env` (ignored by git) to configure these values.
 
@@ -46,6 +54,14 @@ This repository intentionally does not store `.env` files. Use your preferred se
   - Base URL for API calls
   - Default: empty (same-origin)
   - Example (dev): `http://localhost:5000`
+
+## 🔗 Related documents
+
+- 🧭 Docs hub: [docs/README.md](README.md)
+- 🚀 Deployment: [docs/DEPLOYMENT.md](DEPLOYMENT.md)
+- 🔌 API spec: [docs/API.md](API.md)
+- 🧪 Testing report: [docs/TESTING_REPORT.md](TESTING_REPORT.md)
+- 🔒 Security report: [docs/SECURITY_REPORT.md](SECURITY_REPORT.md)
 
 <!-- Signed-off-by: Relay (DevOps/SRE) -->
 

@@ -3,28 +3,89 @@ Created by: CryptoLavar (Project Architect & Developer) cryptolavar@gmail.com
 
 <!-- Role: Quill (Technical Writer) -->
 
-# Docs Index
+# 📚 Yearly Planner Documentation Hub
 
-Back to root: `../README.md`
+**Status**: ✅ Buildable | ✅ Security Baseline Implemented | ✅ Tests Executed  
+**Last Updated**: 2025-12-18
 
-This folder contains all project documentation (except the single root `README.md`).
+[Back to root README](../README.md)
 
-## Files in this folder
+---
 
-- `API.md`
-  - API documentation (aligned to current backend implementation).
-- `DATABASE_ERD.md`
-  - Data model/ERD documentation (aligned to current Mongoose models).
-- `DEPLOYMENT.md`
-  - Deployment guide (aligned to current folder names, scripts, and environment variables).
-- `ENVIRONMENT_VARIABLES.md`
-  - Runtime configuration reference for backend/frontend.
-- `SECURITY_REPORT.md`
-  - Security audit report produced by prior automation (historical reference).
-- `TESTING_REPORT.md`
-  - Testing plan and execution log (current authoritative test run record).
-- `knowledge_base/README.md`
-  - Knowledge base index (bug register, roles, session logs).
+## 🎯 Quick Navigation
+
+### 🧭 Core Docs (Current State)
+
+- **[🚀 Deployment Guide](DEPLOYMENT.md)** - How to run locally and deploy
+- **[🔌 API Specification](API.md)** - Endpoints, auth model, request/response contracts
+- **[🗄️ Database Model / ERD](DATABASE_ERD.md)** - Mongoose collections and relationships
+- **[🧪 Testing Report](TESTING_REPORT.md)** - Test plan + execution log (authoritative)
+- **[🔐 Environment Variables](ENVIRONMENT_VARIABLES.md)** - Configuration reference
+- **[🤖 Workflow](WORKFLOW.md)** - How we work (roles, gates, approvals, documentation rules)
+- **[🌟 Platform Assessment](PLATFORM_COMPLETE_ASSESSMENT.md)** - Current state, gaps, and Q2O benefits
+
+### 🐛 Bugs and Fixes (Records)
+
+- **[🐛 Bugs and Fixes Hub](BugsandFixes/README.md)** - Audits and remediation plans
+
+### 🧬 Major Changes + History
+
+- **[🧬 md_docs](md_docs/README.md)** - Reports, sessions, evolution snapshots
+- **[📊 Reports](md_docs/Reports/README.md)** - Historical security/testing reports
+
+### 📦 Archive (Superseded)
+
+- **[📦 Archive](archive/README.md)** - Documents no longer relevant to current state
+
+---
+
+## 📂 Documentation Structure
+
+```
+docs/
+├── README.md (this file)
+├── API.md
+├── DEPLOYMENT.md
+├── DATABASE_ERD.md
+├── ENVIRONMENT_VARIABLES.md
+├── SECURITY_REPORT.md
+├── TESTING_REPORT.md
+├── BugsandFixes/
+│   ├── README.md
+│   └── BUG_AUDIT_AND_EXECUTION_PLAN.md
+├── md_docs/
+│   ├── README.md
+│   ├── History/
+│   │   ├── README.md
+│   │   └── ROLES_AND_SKILLSETS_2025-12-18.md
+│   ├── Sessions/
+│   │   ├── README.md
+│   │   └── SESSION_LOG_2025-12-18.md
+│   └── Reports/
+│       ├── README.md
+│       ├── Security/
+│       │   ├── README.md
+│       │   └── SECURITY_AUDIT_REPORT_GATE2_2025-12-17.md
+│       └── Testing/
+│           ├── README.md
+│           └── TESTING_REPORT_GATE3_2025-12-17.md
+└── archive/
+    └── README.md
+```
+
+---
+
+## 🌟 Highlights (What’s Launch-Grade Today)
+
+- 🔐 **Authentication**: JWT access tokens + refresh token httpOnly cookie
+- 🛡️ **Security middleware**: Helmet, rate limiting, CORS allowlist, cookie parsing
+- 🧾 **User-scoped data**: tasks are protected and isolated per user
+- 🧪 **Verified builds**: backend lint/tests pass; frontend build/tests pass
+
+---
+
+**Documentation maintained by Q2O Team**  
+**Led by**: CryptoLavar (Project Architect & Developer)
 
 <!-- Signed-off-by: Quill (Technical Writer) -->
 

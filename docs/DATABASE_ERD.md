@@ -1,13 +1,15 @@
-Copyright © 2024-2025 Q2O - Quick to Objective AI Development Platform
+# 🗄️ Database Model (ERD) - Yearly Planner
+
+Copyright © 2024-2025 Q2O - Quick to Objective AI Development Platform  
 Created by: CryptoLavar (Project Architect & Developer) cryptolavar@gmail.com
 
 <!-- Role: Index (Database Engineer - MongoDB) -->
 
-# Database Model (ERD) - Yearly Planner
+**Status**: ✅ Aligned to current Mongoose models  
+**Last Updated**: 2025-12-18
 
-## Back to Root README
-
-`../README.md`
+[Back to root README](../README.md)  
+[Back to docs index](README.md)
 
 ## Overview
 
@@ -61,5 +63,13 @@ erDiagram
 ## Operational notes
 
 - If the database already contains legacy users with a plaintext `password` field (from earlier versions), a migration/reset plan is required for those accounts to authenticate under the current model.
+
+## 🔗 Related documents
+
+- 🧭 Docs hub: [docs/README.md](README.md)
+- 🔌 API spec: [docs/API.md](API.md)
+- 🚀 Deployment: [docs/DEPLOYMENT.md](DEPLOYMENT.md)
+- 🔐 Environment variables: [docs/ENVIRONMENT_VARIABLES.md](ENVIRONMENT_VARIABLES.md)
+- 🧪 Testing report: [docs/TESTING_REPORT.md](TESTING_REPORT.md)
 
 <!-- Signed-off-by: Index (Database Engineer - MongoDB) -->
