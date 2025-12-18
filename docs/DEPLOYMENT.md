@@ -31,6 +31,30 @@ Repository policy:
 
 ## Local development (recommended)
 
+## START_ALL / STOP_ALL scripts (Windows PowerShell)
+
+This repository includes:
+- `START_ALL.ps1` - preflight checks + start backend/frontend
+- `STOP_ALL.ps1` - stop backend/frontend by port
+
+Recommended usage:
+
+```powershell
+.\START_ALL.ps1 -Mode dev -OpenBrowser
+```
+
+Pre-launch verification (runs lint/tests/build before starting):
+
+```powershell
+.\START_ALL.ps1 -Mode prelaunch -OpenBrowser
+```
+
+To stop all:
+
+```powershell
+.\STOP_ALL.ps1
+```
+
 ### Backend (local)
 
 1. Open a terminal at repo root and go to backend:
