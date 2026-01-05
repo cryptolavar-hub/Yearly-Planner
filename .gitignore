@@ -1,0 +1,38 @@
+# Copyright © 2024-2025 Q2O - Quick to Objective AI Development Platform
+# Created by: CryptoLavar (Project Architect & Developer) cryptolavar@gmail.com
+#
+# Role: Relay (DevOps/SRE)
+
+# Dependencies
+**/node_modules/
+
+# Build outputs
+frontend/build/
+**/dist/
+**/build/
+**/.next/
+**/.turbo/
+
+# Logs
+*.log
+execution_stdout.log
+execution_stderr.log
+
+# Env / secrets
+.env
+.env.*
+
+# Test output
+coverage/
+
+# Local tooling/state
+.llm_cost_state.json
+
+# Internal automation artifacts (keep out of public repo by default)
+LLM_responses/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+
+
